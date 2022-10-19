@@ -13,8 +13,7 @@ public class AuthOptions
     public bool ValidateLifetime { get; set; } = true;
     public bool ValidateIssuerSigningKey { get; set; } = true;
     public bool IncludeErrorDetails { get; set; }
-    public bool AllowClientCredentialsRefreshToken { get; set; }
-    public bool AllowPasswordRefreshToken { get; set; } = true;
+    public bool AllowedRefreshToken { get; set; }
     public string NameClaimType { get; set; } = ClaimTypes.NameIdentifier;
     public string RoleClaimType { get; set; } = ClaimTypes.Role;
     public int ClockSkewSeconds { get; set; } = 60 * 5;
