@@ -22,5 +22,5 @@ public class AuthOptions
     public int CodeExpireSeconds { get; set; } = 60 * 10;
     public int? LockoutAccessFailedCount { get; set; }
     public string OtpAuthScheme { get; set; } = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&algorithm=SHA1&digits=6&period=30";
-    public GrantType AllowGrantType { get; set; } = GrantType.ClientCredentials | GrantType.Password;
+    public GrantType AllowedGrantType { get; set; } = GrantType.ClientCredentials | GrantType.Password | GrantType.RefreshToken;
 }
